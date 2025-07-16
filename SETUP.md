@@ -75,6 +75,28 @@ Transfer tokens to your wallet on Polygon network following [Binance's withdrawa
 - Complete 2FA and email confirmation
 - **Wrong network = lost funds** - always double-check!
 
+### 6. Create an Alchemy Account for a Custom RPC URL
+
+While public RPC endpoints for the Polygon network are available, they are often rate-limited, which can cause failures when submitting transactions with the `elephant-cli`. For a more reliable and performant experience, we strongly recommend creating a dedicated RPC URL using Alchemy.
+
+1.  **Create a Free Alchemy Account**
+    *   Go to [alchemy.com](https://alchemy.com) and sign up for a free account.
+
+2.  **Create a New App**
+    *   From your dashboard, click on **+ CREATE APP**.
+    *   **Name**: Enter a descriptive name, like "Elephant Oracle".
+    *   **Chain**: Select **Polygon**.
+    *   **Network**: Select **Polygon PoS Mainnet**.
+    *   Click **CREATE APP**.
+
+3.  **Get Your Custom RPC URL**
+    *   From the dashboard, select the app you just created.
+    *   Click on **VIEW KEY**.
+    *   Copy the **HTTPS** URL. It will look something like this: `https://polygon-mainnet.g.alchemy.com/v2/YOUR_API_KEY`
+
+4.  **Save Your RPC URL**
+    *   Save this URL in a secure place. You will need to provide it to the `elephant-cli` when submitting transactions.
+
 ## Ready to Start?
 
 With all prerequisites complete:

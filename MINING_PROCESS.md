@@ -13,88 +13,71 @@ This document outlines the end-to-end mining process in the protocol, detailing 
 **Objective:** Identify and define the minimum viable dataset (MVD) to initialize a property in the protocol.
 
 **Procedure:**
-
 - Oracles locate target properties using publicly available county metadata.
-- Each seed includes:
-  - `parcel_id`
-  - `property_address`
-  - `source_url`
-  - `county_jurisdiction`
+- Each seed includes essential identifiers like `parcel_id` and the `source_http_request` used to retrieve the data.
 - Seeds are structured in canonical JSON format to ensure compatibility across oracle agents.
-- DAO-published county priorities dictate jurisdictional mining order.
+
+**[Learn more about Seeding](./1_SEEDING.md)**
 
 ### 2. Consensus & Commitment
 
-**Objective:** Achieve agreement across oracles on seed data and commit its Merkle root to the smart contract.
+**Objective:** Achieve agreement across oracles on seed data, convert it to the Lexicon schema, and commit its Merkle root to the smart contract.
 
 **Procedure:**
+- Multiple oracles independently validate, format, and submit the same seed data.
+- Consensus is reached when a supermajority submits an identical data hash.
+- The Merkle root of the data is committed on-chain, establishing the foundational property record.
 
-- Multiple oracles independently validate the same seed data.
-- Consensus is reached when >50% submit identical seed payloads.
-- A Merkle DAG is generated from the seed and the root hash is committed on-chain.
-- This establishes the foundational property identity within the protocol ledger.
+**[Learn more about Consensus & Commitment](./2_CONSENSUS_AND_COMMITMENT.md)**
 
 ### 3. Ingestion
 
-**Objective:** Acquire the full property data set from the seed’s source URL.
+**Objective:** Acquire the full property data set from the seed’s source HTTP request.
 
 **Procedure:**
-
-- Oracles use standardized ingestion pipelines to retrieve data such as:
-  - Owner information
-  - Parcel and tax data
-  - Assessed values
-  - Structural and zoning details
-- Supported by shared tools: API connectors, parsers, and scraping agents.
+- Oracles use standardized ingestion pipelines to retrieve the complete property dataset.
 - Data is stored in an intermediate structure for transformation.
 
-### 4. Conversion to Lexicon Schema
+**[Learn more about Ingestion](./3_INGESTION.md)**
 
-**Objective:** Normalize ingested data into the protocol-wide Lexicon format.
+### 4. Conversion to Lexicon Schema (Full Dataset)
+
+**Objective:** Normalize the full, ingested property dataset into the protocol-wide Lexicon format.
 
 **Procedure:**
+- The full dataset is converted into the Lexicon schema using shared tools and scripts.
+- The output is a set of linked files representing distinct data classes.
 
-- Lexicon is a domain-specific schema designed for cross-jurisdictional consistency.
-- Conversion is performed via:
-  - Rule-based transformation scripts
-  - AI-assisted mapping agents
-  - CLI utilities available in the GitHub repository
-- Output: A set of files for each property, where each file represents a distinct class or data group.
+**[Learn more about Conversion to Lexicon Schema](./4_CONVERSION_TO_LEXICON_SCHEMA.md)**
 
 ### 5. Merkle Hash Commitment (Minting)
 
 **Objective:** Anchor the property’s full dataset to the blockchain via Merkle root hash.
 
 **Procedure:**
+- A deterministic Merkle DAG is built from the full, Lexicon-formatted data.
+- The root hash is committed to the smart contract, finalizing the immutable property record.
 
-- Oracles build a deterministic Merkle DAG from the Lexicon-formatted data.
-- The CLI command `validate-and-upload` validates extracted data against the lexicon and uploads it to IPFS.
-- The CLI command `submit-to-contract` commits the root hash to the protocol smart contract.
-- This step finalizes the creation of an immutable, versioned record for the property.
+**[Learn more about Merkle Hash Commitment](./5_MERKLE_HASH_COMMITMENT.md)**
 
 ### 6. Token Issuance
 
 **Objective:** Reward oracle agents for successful contributions.
 
 **Procedure:**
+- Upon successful minting, the smart contract mints and distributes `vMahout` and `Mahout` tokens to the participating oracles.
 
-- Upon successful minting, the smart contract mints:
-  - `vMahout`: non-transferable token attesting to verified contributions.
-- Upon data usage by the protocol providers
-  - `Mahout`: transferable token representing economic and governance rights.
-- Tokens are automatically distributed to the oracle’s registered wallet.
+**[Learn more about Token Issuance](./6_TOKEN_ISSUANCE.md)**
 
 ### 7. Updating
 
 **Objective:** Detect and apply updates to property data in near real time.
 
 **Procedure:**
+- Oracles continuously monitor the `source_http_request` from the seed data.
+- If a change is detected, a new ingestion-conversion-mint cycle is triggered to update the on-chain record.
 
-- Oracles continuously monitor seed `source_url`s.
-- If the new Merkle root differs from the latest on-chain record:
-  - A new ingestion-conversion-mint cycle is triggered.
-  - Updated records are committed, ensuring continuity and versioning.
-- The update loop enables high-fidelity tracking of changes in county records.
+**[Learn more about Updating](./7_UPDATING.md)**
 
 ---
 

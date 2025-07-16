@@ -6,7 +6,7 @@ The Elephant Protocol is designed to keep property data as current as possible. 
 
 ## Monitoring for Changes
 
-Oracles are responsible for continuously monitoring the `source_url`s provided in the initial seed data. They periodically check for any changes to the data at these sources.
+Oracles are responsible for continuously monitoring the `source_http_request`s provided in the initial seed data. They periodically check for any changes to the data at these sources.
 
 ## Update Cycle
 
