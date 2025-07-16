@@ -26,7 +26,7 @@ Think of it like this: IPFS is like a global filing cabinet, and Pinata makes su
    - Click "Get started"
    - Create a free account (includes 1GB storage)
    - Select free plan
-   - For "Defining you project" step you can put whatever you want, it will not affect fufture actions.
+   - For the "Defining your project" step, you can enter any description - it won't affect future actions.
 
 2. **Generate Your API Key**
 
@@ -49,9 +49,9 @@ Think of it like this: IPFS is like a global filing cabinet, and Pinata makes su
 
 Needed for blockchain transactions.
 
-- Install by going to [metamask.io](https://metamask.io) and click **install metamask** in the top right corner.
+- Go to [metamask.io](https://metamask.io) and click **Install MetaMask** in the top right corner
 - Create new wallet and save recovery phrase
-- Add Polygon network, you can [this guide](https://polygon.technology/blog/getting-started-with-metamask-on-polygon) for it
+- Add Polygon network using [this guide](https://polygon.technology/blog/getting-started-with-metamask-on-polygon)
 - [Detailed MetaMask Setup Guide →](https://support.metamask.io/start/getting-started-with-metamask/)
 
 ### 4. Purchase POL Tokens
