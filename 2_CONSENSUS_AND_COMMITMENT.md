@@ -140,7 +140,7 @@ The `elephant-cli` also simplifies this final step. Refer to the documentation f
 
 ## 4. Consensus and Commitment
 
-The Elephant Protocol requires a majority (greater than 50%) of participating oracles to submit identical data payloads for consensus to be achieved.
+Consensus is reached when three independent oracles submit identical data payloads.
 
 Upon successful consensus, a Merkle DAG (Directed Acyclic Graph) is generated from the seed data. The root hash of this DAG is then committed to the smart contract. This on-chain commitment establishes the foundational identity of the property within the protocol's ledger, creating an immutable and verifiable record.
 
