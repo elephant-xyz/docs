@@ -34,8 +34,7 @@ Currently, the Elephant protocol operates through these smart contracts:
 ### Active Contracts
 
 1. **[Consensus Smart Contract](https://polygonscan.com/address/0x525e59e4de2b51f52b9e30745a513e407652ab7c)**: Where oracles submit data hashes and consensus is reached
-2. **[Oracle Assignment Smart Contract](https://polygonscan.com/address/0xb93AcE67A9017D526245E165ADf361dF9588d3fB)**: Coordinates which properties need data extraction
-3. **[vMahout Token Contract](https://polygonscan.com/token/0x3b3ad74ff6840fa5ff5e65b551fc5e8ed13c3f18)**: Governance token rewarding participating oracles
+2. **[vMahout Token Contract](https://polygonscan.com/token/0x3b3ad74ff6840fa5ff5e65b551fc5e8ed13c3f18)**: Governance token rewarding participating oracles
 
 ### Upcoming Contracts
 
