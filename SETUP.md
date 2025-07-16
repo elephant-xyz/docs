@@ -99,6 +99,12 @@ While public RPC endpoints for the Polygon network are available, they are often
 
 ## Ready to Start?
 
+## Advanced: Outsourcing Mining
+
+For users who wish to delegate their mining operations to a third party without compromising their private keys, we have documented a recommended security pattern. This involves creating a key management system to handle transaction signing.
+
+**[Learn more about Outsourcing Mining](./OUTSOURCING_MINING.md)**
+
 With all prerequisites complete:
 
 1. Request seed file from Elephant team
