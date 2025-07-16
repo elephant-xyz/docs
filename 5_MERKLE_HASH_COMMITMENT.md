@@ -4,4 +4,3 @@
 
 This process is similar to the initial seed data commitment, but it is performed on the complete, Lexicon-formatted property dataset.
 
-Detailed documentation on the tools and techniques for minting the full dataset will be available here.

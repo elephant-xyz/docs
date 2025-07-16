@@ -46,12 +46,7 @@ Contains the core property identifier.
 ```json
 {
   "parcel_id": "494207051020",
-  "source_http_request": "POST /BcpaClient/search.aspx/getParcelInformation HTTP/1.1
-Host: web.bcpa.net
-Content-Type: application/json
-Content-Length: 100
-
-{"folioNumber":"494207051020","taxyear":"2025","action":"CURRENT","use":""}",
+  "source_http_request": "POST /BcpaClient/search.aspx/getParcelInformation HTTP/1.1\r\nHost: web.bcpa.net\r\nContent-Type: application/json\r\nContent-Length: 100\r\n\r\n{\"folioNumber\":\"494207051020\",\"taxyear\":\"2025\",\"action\":\"CURRENT\",\"use\":\"\"}",
   "request_identifier": "494207051020"
 }
 ```
@@ -62,14 +57,8 @@ Contains the property's address information.
 ```json
 {
   "full_address": "3319 NW 69 COURT FORT, LAUDERDALE, FL",
-  "source_http_request": "POST /BcpaClient/search.aspx/getParcelInformation HTTP/1.1
-Host: web.bcpa.net
-Content-Type: application/json
-Content-Length: 100
-
-{"folioNumber":"494207051020","taxyear":"2025","action":"CURRENT","use":""}",
-  "request_identifier": "494207051020",
-  "county_jurisdiction": "Broward"
+  "source_http_request": "POST /BcpaClient/search.aspx/getParcelInformation HTTP/1.1\r\nHost: web.bcpa.net\r\nContent-Type: application/json\r\nContent-Length: 100\r\n\r\n{\"folioNumber\":\"494207051020\",\"taxyear\":\"2025\",\"action\":\"CURRENT\",\"use\":\"\"}",
+  "request_identifier": "494207051020"
 }
 ```
 
@@ -81,9 +70,9 @@ Before submitting to the blockchain, you must validate your data against the off
 
 **Key Validation Points**:
 
--   **Schema Compliance**: Ensure your JSON files comply with the latest schemas at [lexicon.elephant.xyz](https://lexicon.elephant.xyz/).
--   **JSON Canonicalization**: Apply canonicalization to ensure predictable hashes.
--   **CID Format**: Use CIDv1 with a raw codec and SHA-256 hashing.
+- **Schema Compliance**: Ensure your JSON files comply with the latest schemas at [lexicon.elephant.xyz](https://lexicon.elephant.xyz/).
+- **JSON Canonicalization**: Apply canonicalization to ensure predictable hashes.
+- **CID Format**: Use CIDv1 with a raw codec and SHA-256 hashing.
 
 > **Warning**: Submitting data that fails validation is futile. Other oracles will not be able to produce an identical hash, meaning your submission will never reach consensus.
 
@@ -154,3 +143,4 @@ The `elephant-cli` also simplifies this final step. Refer to the documentation f
 Consensus is reached when multiple oracles independently validate and submit the exact same seed data. The Elephant Protocol requires a supermajority (greater than 50%) of participating oracles to submit identical data payloads for consensus to be achieved.
 
 Upon successful consensus, a Merkle DAG (Directed Acyclic Graph) is generated from the seed data. The root hash of this DAG is then committed to the smart contract. This on-chain commitment establishes the foundational identity of the property within the protocol's ledger, creating an immutable and verifiable record.
+
