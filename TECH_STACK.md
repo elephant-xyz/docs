@@ -47,10 +47,6 @@ All contracts feature verified code on Polygonscan and will be fully open-source
 
 As an oracle, you'll earn vMahout tokens—non-transferable governance tokens minted by the consensus contract. These tokens represent your contribution to the network and grant voting rights in protocol decisions. Think of them as proof of your expertise and commitment to data accuracy.
 
-### Oracle Assignment Process
-
-The Oracle Assignment contract serves as your mission board. The Elephant DAO uses this contract to signal which properties need data extraction. During the protocol's early phase, this ensures efficient resource allocation. As the network grows and reaches critical mass, this contract will be phased out in favor of more decentralized mechanisms.
-
 ### The Consensus Mechanism
 
 Here's where the magic happens. The Consensus contract is your primary interaction point as an oracle. The process works like this:
