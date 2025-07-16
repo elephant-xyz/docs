@@ -23,12 +23,14 @@ Think of it like this: IPFS is like a global filing cabinet, and Pinata makes su
 1. **Sign up for Pinata**
 
    - Go to [pinata.cloud](https://pinata.cloud)
-   - Click "Start Building" or "Sign Up"
+   - Click "Get started"
    - Create a free account (includes 1GB storage)
+   - Select free plan
+   - For the "Defining your project" step, you can enter any description - it won't affect future actions.
 
 2. **Generate Your API Key**
 
-   - Once logged in, click your profile icon (top right)
+   - Once logged in, find sidebar on the left
    - Select "API Keys"
    - Click "New Key"
    - Enter a name like "Elephant Oracle" in the Key name field
@@ -41,16 +43,15 @@ Think of it like this: IPFS is like a global filing cabinet, and Pinata makes su
      - API Secret (you don't need this)
      - **JWT (secret access token)** - THIS is what you need!
    - Click the copy button next to the JWT field (bottom one)
-   - Or use "Copy All" and extract the JWT later
    - **Save this immediately** - it won't be shown again
 
 ### 3. MetaMask Wallet
 
 Needed for blockchain transactions.
 
-- Install from [metamask.io](https://metamask.io)
+- Go to [metamask.io](https://metamask.io) and click **Install MetaMask** in the top right corner
 - Create new wallet and save recovery phrase
-- Add Polygon network (automatic when connecting to oracle.elephant.xyz)
+- Add Polygon network using [this guide](https://polygon.technology/blog/getting-started-with-metamask-on-polygon)
 - [Detailed MetaMask Setup Guide →](https://support.metamask.io/start/getting-started-with-metamask/)
 
 ### 4. Purchase POL Tokens
