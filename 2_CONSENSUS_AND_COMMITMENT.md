@@ -19,9 +19,9 @@ This is the entry point, defining the data group.
 
 ```json
 {
-  "label": "Seed",
+  "label": "<correct_leixcon_label>",
   "relationships": {
-    "property_root": {
+    "<key_from_lexicon>": {
       "/": "bafkreia..."
     }
   }
