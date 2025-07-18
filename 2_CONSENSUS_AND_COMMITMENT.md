@@ -6,9 +6,11 @@ This stage is the core of the seeding process, where raw data is transformed int
 
 ## 1. Convert to Lexicon Schema
 
-With the raw data in hand, you must now transform it into the IPLD format specified by the Elephant Protocol. This involves creating a set of linked JSON files.
+With the raw data in hand, you must now transform it into the IPLD format specified by the Elephant Protocol. To get the latest schema and data examples, refer to [https://lexicon.elephant.xyz/](https://lexicon.elephant.xyz/). This process involves creating a set of linked JSON files.
 
 As explained in the [Tech Stack Guide](./TECH_STACK.md), data is stored on IPFS and linked using IPLD. All data must be canonicalized using the **RFC 8785 JSON Canonicalization Scheme** before uploading to IPFS to ensure hash consistency.
+
+> **Important**: The following examples are for illustrative purposes only. For the most up-to-date data formats and comprehensive examples, please refer to the official documentation at [https://lexicon.elephant.xyz/](https://lexicon.elephant.xyz/).
 
 Here is an example of the required structure:
 
@@ -43,24 +45,8 @@ This file links the property to its unnormalized address.
 **`property_root.json`**
 Contains the core property identifier.
 
-```json
-{
-  "parcel_id": "494207051020",
-  "source_http_request": "POST /BcpaClient/search.aspx/getParcelInformation HTTP/1.1\r\nHost: web.bcpa.net\r\nContent-Type: application/json\r\nContent-Length: 100\r\n\r\n{\"folioNumber\":\"494207051020\",\"taxyear\":\"2025\",\"action\":\"CURRENT\",\"use\":\"\"}",
-  "request_identifier": "494207051020"
-}
-```
-
 **`unnormalized_address.json`**
 Contains the property's address information.
-
-```json
-{
-  "full_address": "3319 NW 69 COURT FORT, LAUDERDALE, FL",
-  "source_http_request": "POST /BcpaClient/search.aspx/getParcelInformation HTTP/1.1\r\nHost: web.bcpa.net\r\nContent-Type: application/json\r\nContent-Length: 100\r\n\r\n{\"folioNumber\":\"494207051020\",\"taxyear\":\"2025\",\"action\":\"CURRENT\",\"use\":\"\"}",
-  "request_identifier": "494207051020"
-}
-```
 
 > **Note**: The `"/"` values in the examples above are placeholders. In your actual data, these must be the real CIDs of the linked JSON files.
 
@@ -143,4 +129,3 @@ The `elephant-cli` also simplifies this final step. Refer to the documentation f
 Consensus is reached when three independent oracles submit identical data payloads.
 
 Upon successful consensus, a Merkle DAG (Directed Acyclic Graph) is generated from the seed data. The root hash of this DAG is then committed to the smart contract. This on-chain commitment establishes the foundational identity of the property within the protocol's ledger, creating an immutable and verifiable record.
-

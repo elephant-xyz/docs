@@ -97,6 +97,14 @@ While public RPC endpoints for the Polygon network are available, they are often
 4.  **Save Your RPC URL**
     *   Save this URL in a secure place. You will need to provide it to the `elephant-cli` when submitting transactions.
 
+## Manual vs. CLI-Based Setup
+
+The documentation suite provides a comprehensive look at the manual processes for acting as an Elephant Protocol oracle, detailing the raw implementation steps.
+
+However, to simplify these operations, we have developed the `elephant-cli` tool, which automates much of this workflow. If you prefer to use the CLI for a more streamlined experience, you must first complete the CLI-specific prerequisites, which are different from the manual setup described above.
+
+**CLI Prerequisites:** [https://github.com/elephant-xyz/elephant-cli?tab=readme-ov-file#requirements](https://github.com/elephant-xyz/elephant-cli?tab=readme-ov-file#requirements)
+
 ## Ready to Start?
 
 ## Advanced: Outsourcing Mining
