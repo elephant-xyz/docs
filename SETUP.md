@@ -63,6 +63,8 @@ Required for transaction gas fees (~$5 worth covers many submissions).
 - Purchase POL tokens using the [Binance POL buying guide](https://www.binance.com/en/how-to-buy/polygon-ecosystem-token)
 - Buy via card, P2P, or convert from other crypto
 
+> **Note:** If Binance is not available in your region, or you prefer another exchange, you can find a list of exchanges that trade POL on [CoinGecko](https://www.coingecko.com/en/coins/polygon#markets). The withdrawal steps below are specific to Binance, but the most critical part—selecting the Polygon network—is the same for all exchanges.
+
 ### 5. Withdraw POL to MetaMask
 
 Transfer tokens to your wallet on Polygon network following [Binance's withdrawal guide](https://academy.binance.com/en/articles/your-guide-to-binance-deposit-withdrawal#How-to-Withdraw-From-Binance).

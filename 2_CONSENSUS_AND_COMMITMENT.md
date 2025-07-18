@@ -28,6 +28,8 @@ This is the entry point, defining the data group.
 }
 ```
 
+> **Note on naming:** It is good practice to name the root file after the data group schema's CID (e.g., `bafkreia....json`). You can find the latest schema CIDs at [https://lexicon.elephant.xyz/](https://lexicon.elephant.xyz/).
+
 **`relationship_property_to_address.json`**
 This file links the property to its unnormalized address.
 
